@@ -1,0 +1,128 @@
+/*Barra de navegación*/
+@font-face {
+  font-family: NP-logos;
+  src: url("./fuente/MYRIADPRO-COND.OTF");
+}
+
+@font-face {
+  font-family: NP-regular;
+  src: url("./fuente/MYRIADPRO-REGULAR\ \(1\).OTF");
+}
+
+
+
+/*MATERIALES/USUARIOS*/
+a.navbar-brand img {
+  width: 10%;
+}
+
+
+.titulo {
+    color: #aaa;
+    font-family: system-ui;
+    font-weight: 100;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text2 {
+  font-size: 32px;
+}
+
+.tarjetas {
+  margin-top: 3rem;
+}
+
+.titulhr {
+  margin-top: 5rem;
+}
+
+.card {
+  border: 1px solid white;
+}
+
+.img1 {
+    width: 80%;
+    margin: auto;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ded9d9;
+    color: #3a3a3a;
+}
+
+img#operaciones{
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+a#enlace{
+    text-align: center;
+    text-decoration: none;
+}
+
+.bubbly-button {
+    background-color: #1697d6;
+    border-radius: 4px;
+    
+    border: .1rem solid #fff;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: NP-regular;
+    margin: 0 auto;
+    padding: 0.5rem 4rem;
+    position: relative;
+    /* color: #1697d6; */
+    text-transform: uppercase;
+    outline: 0;
+    transition: 0.5s;
+}
+
+.bubbly-button:hover{
+    background-color: #fff;
+    border:.1rem solid #1697d6;
+    color: #1697d6;
+}
+/*------------------------*/
+
+/*FOOTER*/
+
+footer{
+    margin-top: 6.8rem;
+}
+
+.footcol1, .footcol2 {
+  background-color: #1697d6;
+}
+
+
+.marg {
+  margin-top: 1rem;
+}
+
+footer {
+  bottom: 0;
+  font-family: NP-regular;
+  margin-top:3rem ;
+  width: 100%;
+}
+/*Fin MATERIALES/USUARIOS*/
+
+/*Inicio Listado de items*/
+    
+    .bloqueItem{
+        width: 18rem;
+    }
+
+/*Fin Listado de objetos*/
+
+
+
+/*Formulario*/

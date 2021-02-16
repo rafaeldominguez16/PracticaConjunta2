@@ -1,0 +1,27 @@
+/*Barra de navegación*/
+a.navbar-brand img {
+    width: 10%;
+  }
+
+@font-face {
+    font-family: NP-logos;
+    src: url("./fuente/MYRIADPRO-COND.OTF");
+  }
+  
+  @font-face {
+    font-family: NP-regular;
+    src: url("./fuente/MYRIADPRO-REGULAR\ \(1\).OTF");
+  }
+  
+  nav {
+    background-color: #1697d6;
+    font-family: NP-logos;
+    font-size: 2rem;
+    height: 5rem;
+  }
+  
+  .navbar-dark .navbar-nav .active>.nav-link{
+      color: #fff;
+      font-size: 1.6rem;
+  }
+  /*Fin de navegación*/

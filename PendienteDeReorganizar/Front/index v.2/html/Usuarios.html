@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/css.css" />
+    <link rel="stylesheet" href="../css/navbar.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <!-- Inicio Imagen -->
+        <a class="navbar-brand" href="../index.html"
+          ><img src="../imagenes/np.png"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Fin imagen -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <!-- Inicio dropdown 1 -->
+            <li class="nav-item active dropdown">
+              <a class="nav-link" href="" data-toggle="dropdown"> Gestión </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./Materiales.html">Materiales</a>
+                <a class="dropdown-item" href="./Usuarios.html">Usuarios</a>
+              </div>
+            </li>
+            <!--Fin dropdown 1 -->
+
+            <!-- Inicio dropdown 2-->
+            <li class="nav-item ml-2 active dropdown">
+              <a class="nav-link" href="#" data-toggle="dropdown">
+                Préstamos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Entrega</a>
+                <a class="dropdown-item" href="#">Devolución</a>
+              </div>
+            </li>
+            <!-- Fin dropdown 2 -->
+
+            <!-- Inicio dropdown 3 -->
+            <li class="nav-item ml-2 active dropdown">
+              <a class="nav-link" href="#" data-toggle="dropdown">Consultas </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Prestamos</a>
+                <a class="dropdown-item" href="#">Materiales</a>
+                <a class="dropdown-item" href="#">Usuarios</a>
+                <a class="dropdown-item" href="#">Morosos</a>
+              </div>
+            </li>
+            <!-- Fin dropdown 3 -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--INDEX USUARIOS/MATERIALES-->
+    <div class="container titulhr">
+      <h2 class="titulo">Usuarios</h2>
+    </div>
+
+    <div class="container tarjetas mt-5">
+      <div class="row">
+        <div
+          class="card col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+          style="width: 18rem"
+        >
+          <a href="" id="enlace">
+            <img
+              class="card-img-top img1"
+              id="operaciones"
+              src="../imagenes/insert.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <button class="bubbly-button card-title text-center">
+                Insertar
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div
+          class="card col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+          style="width: 18rem"
+        >
+          <a href="" id="enlace">
+            <img
+              class="card-img-top img1"
+              id="operaciones"
+              src="../imagenes/update.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <button class="bubbly-button card-title text-center">
+                Actualizar
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div
+          class="card col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4"
+          style="width: 18rem"
+        >
+          <a href="" id="enlace">
+            <img
+              class="card-img-top img1"
+              id="operaciones"
+              src="../imagenes/delete.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <button
+              type="button"
+              class="btn btn-primary"
+              data-toggle="modal"
+              data-target="#eliminar"
+            >
+              Eliminar
+            </button>
+
+             
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--FIN DEL INDEX-->
+
+    <!--FOOTER-->
+    <footer class="footcol1 text-white text-center text-lg-start">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="container marg">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Dirección:</h5>
+                <p>Calle Isabela, 1, 41013 Sevilla</p>
+              </div>
+
+              <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Teléfono:</h5>
+                <p>954 23 03 73</p>
+              </div>
+
+              <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Correo:</h5>
+                <p>info@fpnuevasprofesiones.es</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="text-center p-3 footcol2 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"
+      >
+        © 2021 Copyright:
+        <a class="text-white" href="https://fpnuevasprofesiones.es/"
+          >Nuevas Profesiones.com</a
+        >
+      </div>
+    </footer>
+    <!--FIN DEL FOOTER-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

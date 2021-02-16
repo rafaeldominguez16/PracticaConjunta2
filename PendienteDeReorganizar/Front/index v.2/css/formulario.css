@@ -1,0 +1,91 @@
+
+a.navbar-brand img {
+  width: 10%;
+}
+
+@font-face {
+    font-family: NP-logos;
+    src: url("./fuente/MYRIADPRO-COND.OTF");
+  }
+  
+  @font-face {
+    font-family: NP-regular;
+    src: url("./fuente/MYRIADPRO-REGULAR\ \(1\).OTF");
+  }
+/*Formulario*/
+.d-none.d-lg-block.col-lg-4.col-xl-4 img {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+  }
+  
+  button.btn.btn-primary {
+    display: block;
+    margin: 3% auto;
+    width: 25%;
+  }
+  
+  form {
+    margin: 10% 5%;
+  }
+  
+  input {
+    width: 90% !important;
+    margin-left: 10%;
+  }
+  
+  @media screen and (max-width: 575px) {
+    label {
+        margin-left: 5%;
+    }
+  
+    input {
+        width: 90% !important;
+        margin-left: 0%;
+        margin: 0 auto;
+        display: block;
+    }
+  }
+  
+  @media screen and (max-width: 1600px) {
+    img {
+        width: 30%;
+    }
+  }
+  
+  .d-none.d-lg-block.col-lg-4.col-xl-4 {
+    min-height: 100vh;
+    display: flex !important;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .d-none.d-lg-block.col-lg-4.col-xl-4 {
+        display: none !important;
+    }
+  }
+  
+  .bg-blanco{
+    background-color: white!important;
+  }
+  
+  form label{
+    font-family: NP-regular;
+  }
+
+  /*FOOTER*/
+
+.footcol1, .footcol2 {
+  background-color: #1697d6;
+}
+
+
+.marg {
+  margin-top: 1rem;
+}
+
+footer {
+  bottom: 0;
+  font-family: NP-regular;
+  width: 100%;
+}
