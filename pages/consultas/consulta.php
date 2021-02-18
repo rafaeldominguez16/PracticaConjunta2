@@ -90,7 +90,7 @@
                                         echo "<td class='cell100 column3'>" . $columna["modelo"] . "</td>";
                                        // echo "<td class='cell100 column2'>" . $columna["estado"] . "</td>";
                                        // echo "<td class='cell100 column2'>" . $columna["observaciones"] . "</td>";
-                                        echo "<td class='cell100 column4'><a href='" . $columna["ruta"] . "'>Ver Foto</a></td>";
+                                        echo "<td class='cell100 column4'><img src='" . $columna["ruta"] . "'></td>";
                                         echo "</tr>";
                                     }
                                     ?>
