@@ -69,8 +69,7 @@
                                         <th class="cell100 column1">NUMº SERIE</th>
                                         <th class="cell100 column2">MARCA</th>
                                         <th class="cell100 column3">MODELO</th>
-                                        <th class="cell100 column4">OBSERVACIONES</th>
-                                        <th class="cell100 column5">IMAGEN</th>
+                                        <th class="cell100 column4">IMAGEN</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -79,21 +78,22 @@
                         <div class="table100-body js-pscroll">
                             <table>
                                 <tbody>
-                                    <tr class="row100 body">
-                                        <td class="cell100 column1">1</td>
-                                        <td class="cell100 column2">Canon</td>
-                                        <td class="cell100 column3">D70</td>
-                                        <td class="cell100 column4">Buen estado</td>
-                                        <td class="cell100 column5"><img src="../../img/camara.jpg" alt=""></td>
-                                    </tr>
-    
-                                    <tr class="row100 body">
-                                        <td class="cell100 column1">2</td>
-                                        <td class="cell100 column2">Red</td>
-                                        <td class="cell100 column3">Komodo</td>
-                                        <td class="cell100 column4">Muy cara</td>
-                                        <td class="cell100 column5"><img src="../../img/camara.jpg" alt=""></td>
-                                    </tr>
+                                    <?php
+                                    $conexionBD = mysqli_connect("localhost", "root", "", "bd_prestamos");
+                                    $consulta = mysqli_query($conexionBD, "SELECT * FROM materiales ");
+
+                                    while ($columna = mysqli_fetch_array($consulta, MYSQLI_ASSOC)) {
+                                        echo "<tr>";
+                                        echo "<td class='cell100 column1'>" . $columna["num_serie"] . "</td>";
+                                        // echo "<td class='cell100 column2'>" . $columna["nombre_materiales"] . "</td>";
+                                        echo "<td class='cell100 column2'>" . $columna["marca"] . "</td>";
+                                        echo "<td class='cell100 column3'>" . $columna["modelo"] . "</td>";
+                                       // echo "<td class='cell100 column2'>" . $columna["estado"] . "</td>";
+                                       // echo "<td class='cell100 column2'>" . $columna["observaciones"] . "</td>";
+                                        echo "<td class='cell100 column4'><a href='" . $columna["ruta"] . "'>Ver Foto</a></td>";
+                                        echo "</tr>";
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
