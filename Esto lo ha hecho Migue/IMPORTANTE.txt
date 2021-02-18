@@ -1,0 +1,13 @@
+se ha editado
+- index de prestamos
+- index de raiz
+-  entregar
+- actualizar materiales
+- actualizar usuarios
+- insertar materiales
+- insertar usuarios
+
+
+
+
+Se han agregado los name de los input para que se enlacen con el PHP. :)
