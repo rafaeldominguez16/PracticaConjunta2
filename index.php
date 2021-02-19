@@ -36,65 +36,65 @@
                         </div>
 
                         <div class="container-login100-form-btn p-t-10">
-                            <button class="login100-form-btn" type="submit" name="submit">
-                                Acceder
-                            </button>
+                            <button class="login100-form-btn" type="submit" name="submit">Acceder</button>
                         </div>
 
                         <div class="text-center p-t-30 ">
-                            <a class="txt1" href="#">
-                                Acceso Alumnos
-                            </a>
+                            <a class="txt1" href="#">Acceso Alumnos</a>
                         </div>
                     </form>
+
                     <?php
-                    if (isset($_POST['submit'])) {
+                        error_reporting(0);
+                        if (isset($_POST['submit'])) {
+                            //Conexión con la Base de Datos.
+                                $servername = "localhost";
+                                $database = "bd_prestamos";
+                                $username = "root";
+                                $password = "";
+
+                            //Crear conexión
+                                $conn = mysqli_connect($servername, $username, $password, $database);
+
+                            //Cogemos los datos de los inputs mediante el método POST
+                                if (isset($_POST['username']) and isset($_POST['pass'])) {
+                                    $usuario = $_POST['username'];
+                                    $contrasenia = $_POST['pass'];
+                                }
+
+                            //Solicitud de datos preparada para resistir inyección SQL.
+                                if ($stmt = mysqli_prepare($conn, "SELECT nombre_usuarios FROM usuarios WHERE nombre_usuarios = ? AND contrasenia = ?")) {
+                                    mysqli_stmt_bind_param($stmt, "ss", $usuario, $contrasenia);
+
+                                    mysqli_stmt_execute($stmt);
+                                    mysqli_stmt_bind_result($stmt, $res);
+                                    mysqli_stmt_fetch($stmt);
+
+                                    if ($res != "") {
+                                        header('Location: pages/principal.php');
+                                    } else {
+                                        echo "<div class='alert alert-danger mt-3 text-center' role='alert'>El usuario introducido <b>no existe</b>.</div>";
+                                    }
+
+                                    mysqli_stmt_close($stmt);
+                                }
+
+                                mysqli_close($conn);
+                        }
                         
-                        //CONEXION A LA BBDD
-                        $servername = "localhost";
+                        $SQL6 = "SELECT fecha_maxima FROM prestamos WHERE num_serie = '$numSerie1'";
+                        $consulta = mysqli_query($conn, $SQL6);
+                        $columna = mysqli_fetch_array($consulta, MYSQLI_ASSOC);
 
-                        $database = "bd_prestamos";
+                        $date1 = new DateTime($columna["fecha_maxima"]);
+                        $date2 = new DateTime("NOW");
+                        $diff = $date1->diff($date2);
 
-                        $username = "root";
-
-                        $password = "";
-
-                        //Crear conexión
-                        $conn = mysqli_connect($servername, $username, $password, $database);
-
-                        //Cogemos los datos de los inputs mediante el método POST
-                        if (isset($_POST['username']) and isset($_POST['pass'])) {
-
-                            $usuario = $_POST['username'];
-
-                            $contrasenia = $_POST['pass'];
+                        if ($diff > 0) {
+                            $SQL7 = "UPDATE usuarios SET moroso = 1 WHERE dni = '$dni'";
+                            mysqli_query($conexionBD, $SQL7);
                         }
-
-                        //Solicitud de datos preparada para resistir inyección SQL.
-                        if ($stmt = mysqli_prepare($conn, "SELECT nombre_usuarios FROM usuarios WHERE nombre_usuarios = ? AND contrasenia = ?")) {
-
-                            mysqli_stmt_bind_param($stmt, "ss", $usuario, $contrasenia);
-
-                            mysqli_stmt_execute($stmt);
-
-                            mysqli_stmt_bind_result($stmt, $res);
-
-                            mysqli_stmt_fetch($stmt);
-
-                            if ($res != "") {
-
-                                echo "<div class='alert alert-success mt-3 text-center' role='alert'><b>Se inició sesión correctamente</b>.</div>";
-                            } else {
-
-                                echo "<div class='alert alert-danger mt-3 text-center' role='alert'>El usuario introducido <b>no existe</b>.</div>";
-                            }
-
-                            mysqli_stmt_close($stmt);
-                        }
-
-                        mysqli_close($conn);
-                    }
-                    ?>
+?>
                 </div>
             </div>
         </div>

@@ -40,7 +40,9 @@ li.ttle b {
     color: white;
     border-color: #1697d6;
     background: #1697d6;
-	transition: 0.7s;
+    transition: 0.7s;
+    position: relative;
+    top: -0.5em;
 }
 
 .btn-outline-primary:hover {

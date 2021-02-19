@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-02-2021 a las 15:44:39
+-- Tiempo de generación: 19-02-2021 a las 18:36:31
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -42,8 +42,14 @@ CREATE TABLE `materiales` (
 --
 
 INSERT INTO `materiales` (`num_serie`, `nombre_materiales`, `marca`, `modelo`, `estado`, `observaciones`, `ruta`) VALUES
-('1', 'camara', 'canon', 'm89', 'prestamo', 'Davi no te pase', ''),
-('34', 'auricular', 'trtw', 'rtrt', 'reparacion', 'erwerw', '');
+('AB3672DE38', 'camara', 'Nikon', 'D800', 'stock', '', 'img/materiales/AB3672DE38.png'),
+('AG5872HY89', 'auricular', 'Bose', '35 II', 'stock', '', 'img/materiales/AG5872HY89.png'),
+('AW3429FJ32', 'microfono', 'Sennheiser', 'MD441-U', 'stock', '', 'img/materiales/AW3429FJ32.png'),
+('DJ3782NJ39', 'auricular', 'Audio-Technica', 'ATHM50XBT', 'stock', '', 'img/materiales/DJ3782NJ39.png'),
+('DU3784GD32', 'camara', 'Canon', 'XF100', 'stock', '', 'img/materiales/DU3784GD32.png'),
+('HR4568RS56', 'cable', 'VMC', '15FS', 'stock', '', 'img/materiales/HR4568RS56.png'),
+('RE3847RF38', 'microfono', 'Shure', 'SM 7B', 'stock', '', 'img/materiales/RE3847RF38.png'),
+('UY3783JK39', 'tripode', 'Manfrotto', 'MVK504XT', 'stock', '', 'img/materiales/UY3783JK39.png');
 
 -- --------------------------------------------------------
 
@@ -58,14 +64,6 @@ CREATE TABLE `prestamos` (
   `fecha_devolucion` date DEFAULT NULL,
   `fecha_maxima` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `prestamos`
---
-
-INSERT INTO `prestamos` (`dni`, `num_serie`, `fecha_prestamo`, `fecha_devolucion`, `fecha_maxima`) VALUES
-('53535353H', '1', '2021-02-16', '0000-00-00', '2021-03-16'),
-('53535353H', '34', '2021-02-10', '2021-02-11', '2021-04-08');
 
 -- --------------------------------------------------------
 
@@ -82,7 +80,7 @@ CREATE TABLE `usuarios` (
   `ciclo` varchar(10) NOT NULL,
   `moroso` tinyint(1) NOT NULL,
   `num_objetos` tinyint(4) NOT NULL,
-  `contrasenia` blob NOT NULL
+  `contrasenia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -90,9 +88,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`dni`, `nombre_usuarios`, `apellidos`, `curso`, `rol`, `ciclo`, `moroso`, `num_objetos`, `contrasenia`) VALUES
-('1', 'pepe', 'pepe', 2, 'usuario', 'DAW', 1, 1, ''),
-('2', 'jojo', 'jojo', 1, 'usuario', 'DAM', 1, 2, ''),
-('53535353H', 'jj', 'jj', 1, 'servicio_tecnico', 'dd', 1, 3, '');
+('', 'admin', '', 0, '', '', 0, 0, 'admin'),
+('27263749O', 'Ibai', 'Llanos Garatea', 2, 'usuario', 'DAM', 0, 0, ''),
+('28749290N', 'Manuel', 'Ruiz de Lopera', 2, 'usuario', 'RAE', 0, 0, ''),
+('28894737E', 'Joaquín', 'Sánchez Rodriguez', 1, 'usuario', 'A3D', 0, 0, ''),
+('29254729Z', 'Nuria', 'Fuentes Fuentes', 1, 'usuario', 'DAM', 0, 0, '');
 
 --
 -- Índices para tablas volcadas
